@@ -1,0 +1,20 @@
+extends layout
+
+block content
+
+  div.row
+    div.col-md-12
+      h3: a(href='newrest') New Restaurant
+      h1 Restaurants
+      each val in restaurants
+        a(href='showrest/' + val.id): img(src=val.imageurl)
+        p= val.cuisine
+        p= val.name
+        p= val.city + ", " + val.state
+        p= val.rating + " star(s)"
+
+
+
+
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')

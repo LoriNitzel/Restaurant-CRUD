@@ -1,0 +1,19 @@
+extends layout
+
+block content
+
+
+  img(src=restaurant.imageurl)
+  br
+  a(href='/editrest/' + restaurant.id): button.btn.btn-success.pull-center Edit
+  br
+  br
+  button.btn.btn-success.pull-center Delete
+
+
+
+
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+
+  

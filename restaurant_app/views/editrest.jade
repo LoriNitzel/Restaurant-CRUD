@@ -1,0 +1,85 @@
+extends layout
+
+block content
+
+  h1 Edit Restaurant
+  form(name="editrest", method="post", action='editrest')
+    p Name
+    input(type='text', name='restaurantName', value=restaurant.name)
+    p Location
+    input(type='text', name='city', value=restaurant.city)
+    select(name='state', selected='selected', value=restaurant.state)
+      option(value='AL') Alabama
+      option(value='AK') Alaska
+      option(value='AZ') Arizona
+      option(value='AR') Arkansas
+      option(value='CA') California
+      option(value='CO') Colorado
+      option(value='CT') Connecticut
+      option(value='DE') Delaware
+      option(value='DC') District Of Columbia
+      option(value='FL') Florida
+      option(value='GA') Georgia
+      option(value='HI') Hawaii
+      option(value='ID') Idaho
+      option(value='IL') Illinois
+      option(value='IN') Indiana
+      option(value='IA') Iowa
+      option(value='KS') Kansas
+      option(value='KY') Kentucky
+      option(value='LA') Louisiana
+      option(value='ME') Maine
+      option(value='MD') Maryland
+      option(value='MA') Massachusetts
+      option(value='MI') Michigan
+      option(value='MN') Minnesota
+      option(value='MS') Mississippi
+      option(value='MO') Missouri
+      option(value='MT') Montana
+      option(value='NE') Nebraska
+      option(value='NV') Nevada
+      option(value='NH') New Hampshire
+      option(value='NJ') New Jersey
+      option(value='NM') New Mexico
+      option(value='NY') New York
+      option(value='NC') North Carolina
+      option(value='ND') North Dakota
+      option(value='OH') Ohio
+      option(value='OK') Oklahoma
+      option(value='OR') Oregon
+      option(value='PA') Pennsylvania
+      option(value='RI') Rhode Island
+      option(value='SC') South Carolina
+      option(value='SD') South Dakota
+      option(value='TN') Tennessee
+      option(value='TX') Texas
+      option(value='UT') Utah
+      option(value='VT') Vermont
+      option(value='VA') Virginia
+      option(value='WA') Washington
+      option(value='WV') West Virginia
+      option(value='WI') Wisconsin
+      option(value='WY') Wyoming
+    p Cuisine
+    select(name='Cuisine', value=restaurant.cuisine)
+      option(value='mex') Mexican
+      option(value='amer') American
+      option(value='ital') Italian
+      option(value='viet') Vietnamese
+      option(value='thai') Thai
+      option(value='veg') Vegetarian
+    p Rating
+    input(type='radio', name='onestar', value=restaurant.rating)
+    input(type='radio', name='onestar', value=restaurant.rating)
+    input(type='radio', name='onestar', value=restaurant.rating, checked)
+    input(type='radio', name='onestar', value=restaurant.rating)
+    input(type='radio', name='onestar', value=restaurant.rating)
+    p Image
+    input(type='text', name='imageURL', value=restaurant.imageurl)
+    br
+    br
+    textarea(rows=3, name='shortbio') '' + restaurant.bio
+    br 
+    input.button.btn.btn-success.pull-center(type='submit', value='submit') 
+    br
+    button.btn.btn-success.pull-center Cancel
