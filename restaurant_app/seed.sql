@@ -1,3 +1,5 @@
+//serial primary key is auto-incrementing! 
+
 INSERT INTO restaurants VALUES(1, 'Los Tacos', 'Denver', 'CO', 'Mexican', 5);
 
 INSERT INTO restaurants (id, name, city, state, cuisine, rating, imageurl, bio) VALUES
